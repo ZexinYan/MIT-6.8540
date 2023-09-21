@@ -17,6 +17,7 @@ import "strconv"
 // and look only at the contents argument. The return value is a slice
 // of key/value pairs.
 func Map(filename string, contents string) []mr.KeyValue {
+	// Zexin: split the content with separators as non-letter
 	// function to detect word separators.
 	ff := func(r rune) bool { return !unicode.IsLetter(r) }
 
